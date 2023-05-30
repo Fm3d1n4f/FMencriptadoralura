@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador y Desencriptador Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+</head>
+
+<body onload="mostrarImagen()">
+
+        <header class="logo-alura">
+            <img src="./image/logo.png" alt="Logo de la pagina de encriptación">
+        </header>
+
+            <label for="texto" class="texto-alura">Ingrese el texto aquí:</label>
+            <input type="text" id="texto" name="texto">
+
+        <div class="botones">
+            <button class="boton-encriptar" onclick="encriptar()">Encriptar</button>
+            <button class="boton-desencriptar" onclick="desencriptar()">Desencriptar</button>
+            <button class="boton-limpiar" onclick="limpiar()">Clear</button>
+            <img id="imagen-resultado" src="" alt="Imagen de resultado" style="transform: rotate(0deg);">
+            <input type="text" id="texto-resultado" name="resultado" readonly style="display: none;" class="resultado">
+            <button id="btn-copiar" onclick="copiarResultado()" style="display: none;">Copiar</button>
+        </div>
+    <script>
+      function mostrarImagen() {
+        var imagenResultado = document.getElementById("imagen-resultado");
+        imagenResultado.style.display = "block";
+        imagenResultado.src = "./image/muñeco.png";
+      }
+  
+    function encriptar() {
+      var textoInput = document.getElementById("texto").value;
+      var resultadoImg = document.getElementById("imagen-resultado");
+      var resultadoText = document.getElementById("texto-resultado");
+      var btnCopiar = document.getElementById("btn-copiar");
+
+      var textoEncriptado = "";
+
+      for (var i = 0; i < textoInput.length; i++) {
+        var letra = textoInput.charAt(i);
+
+        switch (letra) {
+          case 'e':
+            textoEncriptado += 'enter';
+            break;
+          case 'i':
+            textoEncriptado += 'imes';
+            break;
+          case 'a':
+            textoEncriptado += 'ai';
+            break;
+          case 'o':
+            textoEncriptado += 'ober';
+            break;
+          case 'u':
+            textoEncriptado += 'ufat';
+            break;
+          default:
+            textoEncriptado += letra;
+        }
+      }
+
+  
+      if (textoEncriptado === textoInput) {
+        resultadoImg.style.display = "none";
+        resultadoText.style.display = "none";
+        btnCopiar.style.display = "none";
+      } else {
+        resultadoImg.style.display = "block";
+        resultadoText.style.display = "block";
+        btnCopiar.style.display = "block";
+      }
+
+      resultadoImg.style.transform = "rotate(0deg)";
+
+
+      resultadoImg.src = "./image/muñeco.png";
+      resultadoText.value = textoEncriptado;
+    }
+
+    function desencriptar() {
+      var textoInput = document.getElementById("texto").value;
+      var resultadoImg = document.getElementById("imagen-resultado");
+      var resultadoText = document.getElementById("texto-resultado");
+      var btnCopiar = document.getElementById("btn-copiar");
+      var textoDesencriptado = "";
+      var textoDesencriptar = resultadoText.value;
+      while (textoDesencriptar !== textoDesencriptado) {
+        textoDesencriptado = textoDesencriptar;
+        textoDesencriptar = textoDesencriptar.replace("enter", "e");
+        textoDesencriptar = textoDesencriptar.replace("imes", "i");
+        textoDesencriptar = textoDesencriptar.replace("ai", "a");
+        textoDesencriptar = textoDesencriptar.replace("ober", "o");
+        textoDesencriptar = textoDesencriptar.replace("ufat", "u");
+      }
+
+      if (textoDesencriptado === textoInput) {
+        resultadoImg.style.display = "none";
+        resultadoText.style.display = "none";
+        btnCopiar.style.display = "none";
+      } else {
+        resultadoImg.style.display = "block";
+        resultadoText.style.display = "block";
+        btnCopiar.style.display = "block";
+      }
+
+      resultadoImg.style.transform = "rotate(360deg)";
+
+      resultadoImg.src = "./image/muñeco.png";
+      resultadoText.value = textoDesencriptado;
+    }
+
+    function copiarResultado() {
+      var resultadoText = document.getElementById("texto-resultado");
+      resultadoText.select();
+      resultadoText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("¡El resultado ha sido copiado!");
+      alert("¡Copie el resultado y peguelo en la primera casilla para desencriptar!");
+    }
+
+    function limpiar() {
+        document.getElementById("texto").value = "";
+        document.getElementById("imagen-resultado").style.display = "block";
+        document.getElementById("texto-resultado").value = "";
+        document.getElementById("btn-copiar").style.display = "none";
+        document.getElementById("texto-resultado").style.display = "none";
+}
+
+  </script>
+</body>
+
+<footer>
+    <p class="copyright">&copy Copyright Fernando Medina 2023</p>
+</footer>
+
+</html>

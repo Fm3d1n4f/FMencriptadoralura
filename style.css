@@ -1,0 +1,209 @@
+body{
+  background: #f2f2f2;
+}
+
+.logo-alura{
+  width: 100%;
+  margin: 20px 40px;
+  display: block;
+}
+
+.texto-alura{
+  width:  60px 30px 30px 30px;
+  margin: 20px 40px;
+  display: block;
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  font-size: 40px;
+  color: #052051;
+}
+
+#texto {
+    width: 80%;
+    resize: vertical; 
+    height: 4em;
+    display: block;
+    margin: 2em auto;
+    background: #f2f2f2;
+    text-align: center;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+
+
+.botones{
+  width: 100%;
+  margin: 20px 40;
+  display: flexbox;
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  font-size: 20px;
+  color: #052051; 
+}
+
+.boton-encriptar {
+  width: 10%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #052051;
+  border: none;
+  border-radius: 5px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.boton-desencriptar {
+  width: 10%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #052051;
+  border: none;
+  border-radius: 5px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.boton-limpiar {
+  width: 10%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #052051;
+  border: none;
+  border-radius: 5px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#imagen-resultado {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.resultado{
+  width: 80%;
+  resize: vertical; 
+  height: 4em;
+  display: block;
+  margin: 2em auto;
+  background: #f2f2f2;
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#btn-copiar{
+  width: 10%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #052051;
+  border: none;
+  border-radius: 5px;
+  transition: 1s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  }
+  .copyright{
+    font-size: 13px;
+    margin:20px;
+}
+
+  @media screen and (max-width:480px){
+   
+    body {
+      background: #f2f2f2;
+    }
+    
+    .logo-alura {
+      width: 100%;
+      margin: 20px;
+      display: block;
+    }
+    
+    .texto-alura {
+      width: 100%;
+      margin: 20px;
+      display: block;
+      text-align: center;
+      font-family: 'Segoe UI';
+      font-weight: bold;
+      font-size: 24px;
+      color: #052051;
+    }
+    
+    #texto {
+      width: 80%;
+      resize: vertical;
+      height: 8em;
+      display: block;
+      margin: 2em auto;
+      background: #f2f2f2;
+      text-align: center;
+      font-family: 'Segoe UI';
+      font-weight: bold;
+      font-size: 24px;
+    }
+    
+    .botones {
+      width: 100%;
+      margin: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .boton-encriptar,
+    .boton-desencriptar,
+    .boton-limpiar,
+    #btn-copiar {
+      width: 40%;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      background: #052051;
+      border: none;
+      border-radius: 5px;
+      transition: 1s;
+      cursor: pointer;
+      margin: 10px;
+    }
+    
+    #imagen-resultado {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .resultado {
+      width: 80%;
+      resize: vertical;
+      height: 8em;
+      display: block;
+      margin: 2em auto;
+      background: #f2f2f2;
+      text-align: center;
+      font-family: 'Segoe UI';
+      font-weight: bold;
+      font-size: 24px;
+    }
+    
+    .copyright{
+      font-size: 13px;
+      margin:20px;
+  }
+  }
